@@ -1,5 +1,5 @@
-import 'package:firebase_auth/app/auth/ui/pages/components/custom_buttom.dart';
-import 'package:firebase_auth/app/auth/ui/pages/components/custom_text_form_field.dart';
+import 'package:auth/app/auth/ui/pages/components/custom_buttom.dart';
+import 'package:auth/app/auth/ui/pages/components/custom_text_form_field.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -143,8 +143,6 @@ class _SignUpPageState extends State<SignUpPage> {
                         title: "Agree and continue",
                         color: Colors.blue,
                         onPressed: () {
-                          print(_emailController.text);
-                          print(_passwordController.text);
                         },
                       ),
                     ],

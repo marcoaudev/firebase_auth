@@ -1,6 +1,6 @@
-import 'package:firebase_auth/app/auth/ui/pages/components/button_service.dart';
-import 'package:firebase_auth/app/auth/ui/pages/components/custom_buttom.dart';
-import 'package:firebase_auth/app/auth/ui/pages/components/custom_text_form_field.dart';
+import 'package:auth/app/auth/ui/pages/components/button_service.dart';
+import 'package:auth/app/auth/ui/pages/components/custom_buttom.dart';
+import 'package:auth/app/auth/ui/pages/components/custom_text_form_field.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -15,7 +15,7 @@ class _WelcomePageState extends State<WelcomePage> {
   final _formKey = GlobalKey<FormState>();
   final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
-  bool obscureText = false;
+  bool obscureText = true;
 
   @override
   Widget build(BuildContext context) {
@@ -107,8 +107,7 @@ class _WelcomePageState extends State<WelcomePage> {
                         title: "Continue",
                         color: Colors.blue,
                         onPressed: () {
-                          print(_emailController.text);
-                          print(_passwordController.text);
+                          if (_formKey.currentState!.validate()) {}
                         },
                       ),
                       Padding(

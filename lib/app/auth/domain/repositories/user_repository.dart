@@ -1,4 +1,4 @@
-import 'package:firebase_auth/app/auth/domain/entities/user_entity.dart';
+import 'package:auth/app/auth/domain/entities/user_entity.dart';
 
 abstract class UserRepository {
   Future<UserEntity> signUp({

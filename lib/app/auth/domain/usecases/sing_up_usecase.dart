@@ -1,5 +1,5 @@
-import 'package:firebase_auth/app/auth/domain/entities/user_entity.dart';
-import 'package:firebase_auth/app/auth/domain/repositories/user_repository.dart';
+import 'package:auth/app/auth/domain/entities/user_entity.dart';
+import 'package:auth/app/auth/domain/repositories/user_repository.dart';
 import 'package:flutter/material.dart';
 
 class SignUpUseCase {
