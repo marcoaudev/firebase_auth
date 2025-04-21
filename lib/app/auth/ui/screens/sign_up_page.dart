@@ -1,5 +1,5 @@
-import 'package:auth/app/auth/ui/pages/components/custom_buttom.dart';
-import 'package:auth/app/auth/ui/pages/components/custom_text_form_field.dart';
+import 'package:auth/app/auth/ui/screens/components/custom_buttom.dart';
+import 'package:auth/app/auth/ui/screens/components/custom_text_form_field.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -140,10 +140,12 @@ class _SignUpPageState extends State<SignUpPage> {
                         ),
                       ),
                       CustomButton(
-                        title: "Agree and continue",
                         color: Colors.blue,
-                        onPressed: () {
-                        },
+                        onPressed: () {},
+                        child: Text(
+                          "Agree and continue",
+                          style: TextStyle(color: Colors.white),
+                        ),
                       ),
                     ],
                   ),

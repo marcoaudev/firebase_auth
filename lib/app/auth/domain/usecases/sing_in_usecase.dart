@@ -7,11 +7,11 @@ class SignInUseCase {
 
   SignInUseCase({required this.repository});
 
-  Future<UserEntity> call(SignInParams params) async {
+  Future<UserEntity> call(TextEditingController email, TextEditingController password) async {
     try {
       return await repository.signIn(
-        email: params.email.text,
-        password: params.password.text,
+        email: email.text,
+        password: password.text,
       );
     } on ArgumentError catch (error) {
       throw Exception(error);
@@ -19,14 +19,4 @@ class SignInUseCase {
       throw Exception(error);
     }
   }
-}
-
-class SignInParams {
-  final TextEditingController email;
-  final TextEditingController password;
-
-  SignInParams({
-    required this.email,
-    required this.password,
-  });
 }

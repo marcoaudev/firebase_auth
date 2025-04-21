@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
 class CustomButton extends StatelessWidget {
-  final String title;
+  final Widget child;
   final Color color;
   final void Function() onPressed;
   const CustomButton({
     super.key,
-    required this.title,
+    required this.child,
     required this.color,
     required this.onPressed,
   });
@@ -23,7 +23,7 @@ class CustomButton extends StatelessWidget {
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
         ),
         onPressed: onPressed,
-        child: Text(title, style: TextStyle(color: Colors.white)),
+        child: child,
       ),
     );
   }

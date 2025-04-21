@@ -1,5 +1,5 @@
-import 'package:auth/app/auth/ui/pages/sign_up_page.dart';
-import 'package:auth/app/auth/ui/pages/welcome_page.dart';
+import 'package:auth/app/auth/ui/screens/sign_up_page.dart';
+import 'package:auth/app/auth/ui/screens/sign_in_page.dart';
 import 'package:flutter/material.dart';
 
 class App extends StatelessWidget {
@@ -15,7 +15,7 @@ class App extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
       ),
       routes: {
-        "/": (context) => const WelcomePage(),
+        "/": (context) => const SignInPage(),
         "/signup": (context) => const SignUpPage(),
       },
     );

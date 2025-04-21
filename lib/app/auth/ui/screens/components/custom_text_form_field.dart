@@ -6,6 +6,8 @@ class CustomTextFormField extends StatelessWidget {
   final String? Function(String?)? validator;
   final Widget? suffixIcon;
   final bool obscureText;
+  final TextInputType? keyboardType;
+
   const CustomTextFormField({
     super.key,
     required this.labelText,
@@ -13,6 +15,7 @@ class CustomTextFormField extends StatelessWidget {
     this.validator,
     this.suffixIcon,
     this.obscureText = false,
+    this.keyboardType,
   });
 
   @override
@@ -21,9 +24,11 @@ class CustomTextFormField extends StatelessWidget {
       width: MediaQuery.of(context).size.width * 0.85,
       child: TextFormField(
         validator: validator,
+        keyboardType: keyboardType,
         autovalidateMode: AutovalidateMode.onUnfocus,
         controller: controller,
         obscureText: obscureText,
+        textInputAction: TextInputAction.next,
         decoration: InputDecoration(
           filled: true,
           suffixIcon: suffixIcon,
